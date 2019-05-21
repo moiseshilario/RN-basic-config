@@ -6,7 +6,8 @@
   "extends": "airbnb",
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": true
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,6 +22,13 @@
       "error",
       { "extensions": [".js", ".jsx"] }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": { "rootPathSuffix": "src" }
+    }
   }
 }
